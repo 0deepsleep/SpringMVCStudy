@@ -1,0 +1,22 @@
+/*================================
+	 	IMemberDAO.java
+	    - 인터페이스
+=================================*/
+
+package com.test.mvc;
+
+public interface IMemberDAO
+{
+	// 회원 정보 추가 메소드 선언
+	public int add(MemberDTO member)
+	
+	
+	// 인원 수 확인 메소드 선언
+	public count()
+	{}
+	
+	// 회원 목록 확인 메소드 선언
+	public list()
+	{}
+	
+}

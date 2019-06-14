@@ -1,0 +1,36 @@
+/*================================
+	 	MemberDAO.java
+	    - 인터페이스
+=================================*/
+
+package com.test.mvc;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+public class MemberDAO implements IMemberDAO
+{
+
+	@Override
+	public int add(MemberDTO member) throws SQLException
+	{
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int count() throws SQLException
+	{
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public ArrayList<MemberDTO> list() throws SQLException
+	{
+		// TODO Auto-generated method stub
+		return null;
+	} 
+	
+
+}

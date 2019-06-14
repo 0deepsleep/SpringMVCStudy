@@ -1,0 +1,12 @@
+
+6월 13, 2019 12:32:29.65 NEW SESSION
+6월 13, 2019 12:32:29.65 [3212:4588:0613/123229.652:ERROR:browser_process_sub_thread.cc(217)] Waited 6 ms for network service
+
+6월 14, 2019 11:25:03.89 NEW SESSION
+6월 14, 2019 11:25:03.89 [5592:4680:0614/112503.893:ERROR:browser_process_sub_thread.cc(217)] Waited 48 ms for network service
+6월 14, 2019 12:11:37.22 [9836:1796:0614/121137.228:ERROR:browser_process_sub_thread.cc(217)] Waited 160 ms for network service
+6월 14, 2019 12:13:37.86 [9328:3984:0614/121337.868:ERROR:browser_process_sub_thread.cc(217)] Waited 132 ms for network service
+6월 14, 2019 12:19:45.58 [8516:428:0614/121945.581:ERROR:browser_process_sub_thread.cc(217)] Waited 90 ms for network service
+6월 14, 2019 15:12:57.01 [8932:7688:0614/151257.015:ERROR:browser_process_sub_thread.cc(217)] Waited 215 ms for network service
+6월 14, 2019 15:30:18.99 [10736:11508:0614/153018.995:ERROR:browser_process_sub_thread.cc(217)] Waited 18 ms for network service
+6월 14, 2019 15:48:27.01 [4488:6520:0614/154827.016:ERROR:platform_sensor_reader_win.cc(244)] NOT IMPLEMENTED

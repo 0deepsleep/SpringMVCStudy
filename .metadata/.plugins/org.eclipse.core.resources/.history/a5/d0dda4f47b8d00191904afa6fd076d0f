@@ -1,0 +1,13 @@
+/*===================================
+ 	HelloController.java
+ 	- 사용자 정의 컨트롤러 클래스
+====================================*/
+
+package com.test.mvc;
+
+import org.springframework.web.servlet.mvc.Controller;
+
+public class HelloController implements Controller
+{
+
+}

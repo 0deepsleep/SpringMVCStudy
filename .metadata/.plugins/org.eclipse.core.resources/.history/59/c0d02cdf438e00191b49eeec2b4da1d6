@@ -1,0 +1,17 @@
+/*========================================
+	MemberListController.java
+	- 사용자 정의 컨트롤러 클래스.
+	- 라스트 출력 액션.
+	- DAO 객체에 대한 의존성 주입
+	  → setter 메소드 추가. 
+========================================*/
+
+package com.test.mvc;
+
+import org.springframework.web.servlet.mvc.Controller;
+
+public class MemberListController implements Controller
+{
+	 
+
+}
