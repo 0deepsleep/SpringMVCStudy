@@ -10,3 +10,14 @@
 6월 14, 2019 15:12:57.01 [8932:7688:0614/151257.015:ERROR:browser_process_sub_thread.cc(217)] Waited 215 ms for network service
 6월 14, 2019 15:30:18.99 [10736:11508:0614/153018.995:ERROR:browser_process_sub_thread.cc(217)] Waited 18 ms for network service
 6월 14, 2019 15:48:27.01 [4488:6520:0614/154827.016:ERROR:platform_sensor_reader_win.cc(244)] NOT IMPLEMENTED
+
+6월 18, 2019 10:50:03.35 NEW SESSION
+6월 18, 2019 10:50:03.35 [8856:6404:0618/105003.355:ERROR:browser_process_sub_thread.cc(217)] Waited 18 ms for network service
+6월 18, 2019 11:36:06.04 [4984:9760:0618/113606.045:ERROR:browser_process_sub_thread.cc(217)] Waited 10 ms for network service
+6월 18, 2019 11:37:01.59 [9624:7384:0618/113701.597:ERROR:browser_process_sub_thread.cc(217)] Waited 123 ms for network service
+6월 18, 2019 11:37:27.62 [9000:5948:0618/113727.622:ERROR:browser_process_sub_thread.cc(217)] Waited 122 ms for network service
+6월 18, 2019 13:58:30.65 [5228:9816:0618/135830.655:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+6월 18, 2019 13:58:37.36 [5228:9816:0618/135837.361:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+6월 18, 2019 13:59:19.79 [5228:9816:0618/135919.796:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+6월 18, 2019 14:25:05.62 [5228:9816:0618/142505.622:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+6월 18, 2019 15:15:23.40 [5228:7136:0618/151523.402:ERROR:browser_process_sub_thread.cc(217)] Waited 153 ms for network service
