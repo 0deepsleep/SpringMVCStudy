@@ -11,6 +11,37 @@
 <meta charset="UTF-8">
 <title>EmployeeList.jsp</title>
 <link rel="stylesheet" href="<%=cp %>/css/main.css">
+
+<script type="text/javascript" 
+src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript">
+	
+	//$(document).ready();
+	$(function()
+	{
+		$(".updateBtn").click(function()
+		{
+			// 테스트
+			//alert("수정버튼클릭");
+			
+			$(location).attr("href", "employeeupdateform.action?employeeId=" + $(this).val());
+		});
+		
+		$(".deleteBtn").click(function()
+		{
+			// 테스트
+			//alert("삭제버튼클릭");
+			
+			if(confirm("현재 선택한 데이터를 정말 삭제하시겠습니까?"))
+			{
+				$(location).attr("href", "employeedelete.action?employeeId=" + $(this).val());
+			}
+
+		})
+	});
+
+</script>
+
 </head>
 <body>
 
@@ -121,8 +152,8 @@
 		<%-- 		<c:if test="${employee.grade eq 0}"><td>관리자</td></c:if>
 				<c:if test="${employee.grade eq 1}"><td>사원</td></c:if> --%>
 				
-				<td><button type="button" class="btn">수정</button></td>
-				<td><button type="button" class="btn">삭제</button></td>
+				<td><button type="button" class="btn updateBtn" value="${employee.employeeId }">수정</button></td>
+				<td><button type="button" class="btn deleteBtn" value="${employee.employeeId }">삭제</button></td>
 			</tr>
 			</c:forEach>
 		</table>

@@ -250,7 +250,7 @@ public class EmployeeDAO implements IEmployeeDAO
       
       Connection conn = dataSource.getConnection();
       
-      String sql = "SELECT EMPLOYEEID, NAME, BIRTHDAY, LUNAR, TELEPHONE, DEPARTMENTID, POSITIONID, REGIONID, BASICPAY, EXTRAPAY, SSN1, SSN2, GRADE FROM EMPLOYEE WHERE EMPLOYEEID = ?";
+      String sql = "SELECT EMPLOYEEID, NAME, TO_CHAR(BIRTHDAY, 'YYYY-MM-DD') AS BIRTHDAY, LUNAR, TELEPHONE, DEPARTMENTID, POSITIONID, REGIONID, BASICPAY, EXTRAPAY, SSN1, SSN2, GRADE FROM EMPLOYEE WHERE EMPLOYEEID = ?";
       PreparedStatement pstmt = conn.prepareStatement(sql);
       pstmt.setString(1, employeeId);
       ResultSet rs = pstmt.executeQuery();

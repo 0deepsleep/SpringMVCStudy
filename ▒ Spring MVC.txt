@@ -312,7 +312,7 @@ http://localhost:8090/mvc03/memberlist.action
 
    - #18. EmployeeInsertForm.jsp  	→ 직원 정보 입력 폼 페이지.
 				   AJAX, jQuery 기능 포함.
-   - EmployeeUpdateForm.jsp     → 직원 정보 수정 폼 페이지.
+   - #23. EmployeeUpdateForm.jsp     → 직원 정보 수정 폼 페이지.
 				   AJAX, jQuery 기능 포함.
 
    - DepartmentList.jsp		→ 부서 정보 출력 페이지.
@@ -322,7 +322,7 @@ http://localhost:8090/mvc03/memberlist.action
    - PositionList.jsp 		→ 직위 정보 출력 페이지.
 				   입력, 수정 폼 페이지. 삭제 버튼.
 
-   - Ajax.jsp			→ AJAX 객체 구성 페이지.
+   - #21. Ajax.jsp		→ AJAX 객체 구성 페이지.(=> 클라이언트와 만날 일 없음)
 
    - LoginForm.jsp 		→ 관리자, 일반사원 로그인 폼 페이지
  				   ID(employeeid), PW(주민번호 뒷자리 7자리) 입력.
@@ -334,13 +334,13 @@ http://localhost:8090/mvc03/memberlist.action
 
    <--- 중략 --->
 
-   - #15.EmployeeListController.java 	(employeelist.action)
-   - #19. EmployeeInsertFormController.java  (employeeinsertform.action)
-   - AjaxController.java	        (ajax.action)   
-   - EmployeeInsertController.java      (employeeinsert.action)
-   - EmployeeUpdateFormController.java  (employeeupdateform.action)
-   - EmployeeUpdateController.java      (employeeupdate.action)
-   - EmployeeDeleteController.java      (employeedelete.action)
+   - #15.EmployeeListController.java 		(employeelist.action)
+   - #19. EmployeeInsertFormController.java  	(employeeinsertform.action)
+   - #20. AjaxController.java	        	(ajax.action)   
+   - #22. EmployeeInsertController.java      	(employeeinsert.action)
+   - #24. EmployeeUpdateFormController.java  	(employeeupdateform.action)
+   - EmployeeUpdateController.java     	 	(employeeupdate.action)
+   - EmployeeDeleteController.java      	(employeedelete.action)
 
    - DepartmentListController.java
    - DepartmentInsertFormController.java

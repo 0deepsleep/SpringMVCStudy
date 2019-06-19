@@ -34,9 +34,24 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		});
 		
 		
-		// 직원 추가 버튼이 클릭되었을 때 수행해야 할 코드 처리
+		
+		// 직위(select)의 선택된 내용이 변경되었을 경우 수행해야 할 코드 처리
+		$("#positionId").change(function()
+		{
+			// 테스트 
+			alert("변경");
+			
+			// Ajax 요청 및 응답 처리
+			ajaxRequest();
+			
+		});		
+		
+	
+			
+		// 직원 추가 버튼이 클릭되었을 때 수행해야 할 코드 처리			
 		$("#submitBtn").click(function()
 		{
+			// 데이터 검사(공란이 있는지 여부 검사)
 			if( $("#name").val()=="" || $("#ssn1").val()=="" || $("#ssn2").val()==""
 				|| $("#birthday").val()=="" || $("#telephone").val()==""
 				|| $("#basicPay").val()=="" )
@@ -44,7 +59,20 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 				$("#err").html("필수 입력 항목이 누락되었습니다.");
 				$("#err").css("display", "inline");
 				return;		//-- submit 액션 처리 중단
+			} 
+			
+			// 테스트
+			//alert( $("#minBasicPay").val() );	//--(X)
+			//alert($("#minBasicPay").text());	//--(O)
+			
+			// 최소 기본급 유효성 검사
+			if( parseInt($("#minBasicPay").text()) > parseInt($("#basicPay").val()) )
+			{
+				$("#err").html("입력하신 기본급이 최소 기본급보다 작습니다.");
+				$("#err").css("display", "inline");
+				return;		//-- submit 액션 처리 중단
 			}
+			
 			
 			// 폼 submit 액션 처리 수행
 			$("#employeeForm").submit();
@@ -52,8 +80,7 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 			
 		});
 		
-		
-		
+	
 		
 	});
 	
@@ -76,7 +103,7 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		// ※ 참고로 data 는 파라미터의 데이터타입을 그대로 취하게 되므로
 		//    html 이든, 문자열이든 상관이 없다.
 		
-		$.post("ajax.action", {positionId : $("positionId").val()}, function(data) 
+		$.post("ajax.action", {positionId : $("#positionId").val()}, function(data) 
 		{
 			$("#minBasicPay").html(data);
 		});
@@ -108,7 +135,7 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<!-- DB에 Submit 시켜야하기 때문에 form 태그 있어야 함 -->
 	<div id="content">
 		
-		<h1>[직원 관리]</h1>
+		<h1>[직원 추가]</h1>
 		<hr>
 		
 		<form action="employeeinsert.action" method="post" id="employeeForm">
@@ -137,7 +164,7 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 					<td>
 						<input type="radio" value="0" name="lunar" id="lunar0" checked="checked" />
 						<label for="lunar0">양력</label>
-						<input type="radio" value="1" name="lunar" id="lunar1" checked="checked" />
+						<input type="radio" value="1" name="lunar" id="lunar1"/>
 						<label for="lunar1">음력</label>
 					</td>
 				</tr>
@@ -207,7 +234,8 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 					<td colspan="2" align="center">
 						<br><br>
 						<button type="button" class="btn" id="submitBtn" style="width: 40%; hegiht: 50%;">직원 추가</button>
-						<button type="button" class="btn" id="listBtn" style="width: 40%; hegiht: 50%;">직원 리스트</button>
+						<button type="button" class="btn" id="listBtn" style="width: 40%; hegiht: 50%;"
+						onclick="location.href='employeelist.action'">직원 리스트</button>
 						<br><br>
 						<span id="err" style="color: red; font-weight: bold; display: none;"></span>
 					</td>
