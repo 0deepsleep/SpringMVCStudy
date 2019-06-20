@@ -324,11 +324,11 @@ http://localhost:8090/mvc03/memberlist.action
 
    - #21. Ajax.jsp		→ AJAX 객체 구성 페이지.(=> 클라이언트와 만날 일 없음)
 
-   - LoginForm.jsp 		→ 관리자, 일반사원 로그인 폼 페이지
+   - #27. LoginForm.jsp 	→ 관리자, 일반사원 로그인 폼 페이지
  				   ID(employeeid), PW(주민번호 뒷자리 7자리) 입력.
    - LogoutForm.jsp 		→ 로그아웃 처리와 관련한 폼 페이지.
 
-   - EmpList.jsp 		→ 일반 직원 전용 출력 페이지.
+   - #31. EmpList.jsp 		→ 일반 직원 전용 출력 페이지.
 				   로그아웃 버튼.
 				   입력 / 수정 / 삭제 기능 없음.
 
@@ -339,8 +339,8 @@ http://localhost:8090/mvc03/memberlist.action
    - #20. AjaxController.java	        	(ajax.action)   
    - #22. EmployeeInsertController.java      	(employeeinsert.action)
    - #24. EmployeeUpdateFormController.java  	(employeeupdateform.action)
-   - EmployeeUpdateController.java     	 	(employeeupdate.action)
-   - EmployeeDeleteController.java      	(employeedelete.action)
+   - #25. EmployeeUpdateController.java     	 	(employeeupdate.action)
+   - #26. EmployeeDeleteController.java      	(employeedelete.action)
 
    - DepartmentListController.java
    - DepartmentInsertFormController.java
@@ -363,11 +363,11 @@ http://localhost:8090/mvc03/memberlist.action
    - PositionUpdateController.java
    - PositionDeleteController.java
   
-   - LoginFormController.java
-   - LoginController.java
-   - LogoutController.java
+   - #28. LoginFormController.java
+   - #29. LoginController.java
+   - #32. LogoutController.java
 
-   - EmpListController.java
+   - #30. EmpListController.java
  
    -#17. dispatcher-servlet.xml	→ 컨트롤러 객체 등록. 
                                 → URL 매핑 주소 등록.

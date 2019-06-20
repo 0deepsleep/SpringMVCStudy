@@ -277,7 +277,12 @@ SELECT MINBASICPAY FROM POSITION WHERE POSITIONID=1
 --○ 부서 뷰 조회 쿼리문
 SELECT DEPARTMENTID, DEPARTMENTNAME, DELCHECK FROM DEPARTMENTVIEW ORDER BY DEPARTMENTID;
 
+SELECT *
+FROM EMPLOYEE
+WHERE EMPLOYEEID=1;
+
 -----------------------------------------------------------------------------------------
+
 
 
 --○ 로그인, 로그아웃 과정 추가

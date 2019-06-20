@@ -59,7 +59,7 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 				$("#err").html("필수 입력 항목이 누락되었습니다.");
 				$("#err").css("display", "inline");
 				return;		//-- submit 액션 처리 중단
-			} 
+			}  
 			
 			// 테스트
 			//alert( $("#minBasicPay").val() );	//--(X)
@@ -107,7 +107,6 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		{
 			$("#minBasicPay").html(data);
 		});
-		
 		
 		
 		

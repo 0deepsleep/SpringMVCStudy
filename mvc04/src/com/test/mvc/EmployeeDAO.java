@@ -170,9 +170,9 @@ public class EmployeeDAO implements IEmployeeDAO
    {
       int result = 0;
       Connection conn = dataSource.getConnection();
-      String sql = "INSERT INTO EMPLOYEE( EMPLOYEEID, NAME, SSN1, SSN2, BIRTHDAY, LUNAR, TELEPHONE, DEPARTMENTID, POSITIONID, REGIONID, BASICPAY, EXTRAPAY, GRADE)"
+      String sql = "INSERT INTO EMPLOYEE( EMPLOYEEID, NAME, SSN1, SSN2, BIRTHDAY, LUNAR, TELEPHONE, DEPARTMENTID, POSITIONID, REGIONID, BASICPAY, EXTRAPAY)"
             + " VALUES( EMPLOYEESEQ.NEXTVAL, ?, ?, CRYPTPACK.ENCRYPT(?,?), TO_DATE(?, 'YYYY-MM-DD'), "
-            + "?, ?, ?, ?, ?, ?, ?,?)";
+            + "?, ?, ?, ?, ?, ?, ?)";
       PreparedStatement pstmt = conn.prepareStatement(sql);
       pstmt.setString(1, employee.getName());
       pstmt.setString(2, employee.getSsn1());
@@ -186,7 +186,6 @@ public class EmployeeDAO implements IEmployeeDAO
       pstmt.setString(10, employee.getRegionId());
       pstmt.setInt(11, employee.getBasicPay());
       pstmt.setInt(12, employee.getExtraPay());
-      pstmt.setInt(13, employee.getGrade());
       
       result = pstmt.executeUpdate();
       pstmt.close();
@@ -220,7 +219,7 @@ public class EmployeeDAO implements IEmployeeDAO
       
       String sql = "UPDATE EMPLOYEE SET NAME=? , BIRTHDAY=TO_DATE(?,'YYYY-MM-DD') , LUNAR=? , TELEPHONE=? , "
             + " DEPARTMENTID=? , POSITIONID=? , REGIONID=? , BASICPAY=? , EXTRAPAY=? , SSN1=? , "
-            + " SSN2=CRYPTPACK.ENCRYPT(?,?) , GRADE=? WHERE EMPLOYEEID=?";
+            + " SSN2=CRYPTPACK.ENCRYPT(?,?) WHERE EMPLOYEEID=?";
       PreparedStatement pstmt = conn.prepareStatement(sql);
       pstmt.setString(1, employee.getName());
       pstmt.setString(2, employee.getBirthday());
@@ -234,8 +233,7 @@ public class EmployeeDAO implements IEmployeeDAO
       pstmt.setString(10, employee.getSsn1());
       pstmt.setString(11, employee.getSsn2());
       pstmt.setString(12, employee.getSsn2());
-      pstmt.setInt(13, employee.getGrade());
-      pstmt.setString(14, employee.getEmployeeId());
+      pstmt.setString(13, employee.getEmployeeId());
       
       result = pstmt.executeUpdate();
       pstmt.close();
@@ -284,7 +282,7 @@ public class EmployeeDAO implements IEmployeeDAO
       
       Connection conn = dataSource.getConnection();
       
-      String sql = "SELECT NAME FROM EMPLOYEE WHERE EMPLOYEEID=? AND SSN2 = CRYPTPACK.ENCRYPT(?,?)";
+      String sql = "SELECT NAME FROM EMPLOYEE WHERE EMPLOYEEID=? AND SSN2=CRYPTPACK.ENCRYPT(?,?)";
       PreparedStatement pstmt = conn.prepareStatement(sql);
       pstmt.setString(1, id);
       pstmt.setString(2, pw);
@@ -294,7 +292,8 @@ public class EmployeeDAO implements IEmployeeDAO
          result = rs.getString("NAME");
       
       rs.close();
-      pstmt.close();      
+      pstmt.close();    
+      conn.close();
       
       return result;
    }
@@ -306,7 +305,7 @@ public class EmployeeDAO implements IEmployeeDAO
       
       Connection conn = dataSource.getConnection();
       
-      String sql = "SELECT NAME FROM EMPLOYEE WHERE EMPLOYEEID=? AND SSN2 = CRYPTPACK.ENCRYPT(?,?) AND GRADE = 0";
+      String sql = "SELECT NAME FROM EMPLOYEE WHERE EMPLOYEEID=? AND SSN2=CRYPTPACK.ENCRYPT(?,?) AND GRADE=0";
       PreparedStatement pstmt = conn.prepareStatement(sql);
       pstmt.setString(1, id);
       pstmt.setString(2, pw);
@@ -317,6 +316,7 @@ public class EmployeeDAO implements IEmployeeDAO
       
       rs.close();
       pstmt.close();      
+      conn.close();
       
       return result;
    }

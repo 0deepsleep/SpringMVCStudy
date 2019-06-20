@@ -55,3 +55,12 @@
 6월 19, 2019 15:42:13.02 [6368:1060:0619/154213.021:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
 6월 19, 2019 15:42:19.27 [6368:1060:0619/154219.272:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
 6월 19, 2019 15:49:48.39 [6368:1060:0619/154948.390:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+
+6월 20, 2019 10:51:37.34 NEW SESSION
+6월 20, 2019 10:51:37.34 [7316:7396:0620/105137.340:ERROR:browser_process_sub_thread.cc(217)] Waited 129 ms for network service
+6월 20, 2019 10:51:52.42 [8148:9996:0620/105152.407:ERROR:browser_process_sub_thread.cc(217)] Waited 138 ms for network service
+6월 20, 2019 12:03:29.17 [9792:8268:0620/120329.175:ERROR:browser_process_sub_thread.cc(217)] Waited 174 ms for network service
+6월 20, 2019 12:12:03.49 [6064:8756:0620/121203.494:ERROR:browser_process_sub_thread.cc(217)] Waited 104 ms for network service
+6월 20, 2019 12:39:15.33 [9772:6532:0620/123915.337:ERROR:browser_process_sub_thread.cc(217)] Waited 103 ms for network service
+6월 20, 2019 12:45:22.92 [9512:10164:0620/124522.922:ERROR:browser_process_sub_thread.cc(217)] Waited 44 ms for network service
+6월 20, 2019 12:49:33.53 [6580:1676:0620/124933.534:ERROR:browser_process_sub_thread.cc(217)] Waited 142 ms for network service

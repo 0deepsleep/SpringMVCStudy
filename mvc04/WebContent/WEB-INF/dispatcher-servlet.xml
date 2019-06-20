@@ -70,4 +70,37 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 	</bean>
 	
 
+	<bean name="/employeeupdate.action" class="com.test.mvc.EmployeeUpdateController">
+		<property name="dao" ref="employeeDAO"></property>
+	</bean>
+
+	<bean name="/employeedelete.action" class="com.test.mvc.EmployeeDeleteController">
+		<property name="dao" ref="employeeDAO"></property>
+	</bean>
+	
+	<bean name="/emplist.action" class="com.test.mvc.EmpListController">
+		<property name="dao" ref="employeeDAO"></property>
+	</bean>
+	
+	<!-- Region 관련 Controller 등록 -->
+	
+	
+	<!-- Department 관련 Controller 등록 -->
+	
+	
+	<!-- Position 관련 Controller 등록 -->
+	
+	
+	<!-- Login 및 Logout 관련 Controller 등록 -->
+	<!-- 넘겨받을 정보 없이 털어내면 끝 -->
+	<bean name="/loginform.action" class="com.test.mvc.LoginFormController"></bean>
+
+	<bean name="/login.action" class="com.test.mvc.LoginController">
+		<property name="dao" ref="employeeDAO"></property>
+	</bean>
+	
+	<!-- 넘겨받을 정보 없이 털어내면 끝 -->
+	<bean name="/logout.action" class="com.test.mvc.LogoutController"></bean> 
+	
+
 </beans>
