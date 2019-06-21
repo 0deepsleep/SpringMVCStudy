@@ -37,7 +37,7 @@ src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script
 				$(location).attr("href", "employeedelete.action?employeeId=" + $(this).val());
 			}
 
-		})
+		});
 	});
 
 </script>

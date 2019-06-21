@@ -317,7 +317,7 @@ http://localhost:8090/mvc03/memberlist.action
 
    - DepartmentList.jsp		→ 부서 정보 출력 페이지.
 				   입력, 수정 폼 페이지. 삭제 버튼
-   - RegionList.jsp		→ 지역 정보 출력 페이지.
+   - #34. RegionList.jsp	→ 지역 정보 출력 페이지.
 				   입력, 수정 폼 페이지. 삭제 버튼.
    - PositionList.jsp 		→ 직위 정보 출력 페이지.
 				   입력, 수정 폼 페이지. 삭제 버튼.
@@ -339,7 +339,7 @@ http://localhost:8090/mvc03/memberlist.action
    - #20. AjaxController.java	        	(ajax.action)   
    - #22. EmployeeInsertController.java      	(employeeinsert.action)
    - #24. EmployeeUpdateFormController.java  	(employeeupdateform.action)
-   - #25. EmployeeUpdateController.java     	 	(employeeupdate.action)
+   - #25. EmployeeUpdateController.java     	-(employeeupdate.action)
    - #26. EmployeeDeleteController.java      	(employeedelete.action)
 
    - DepartmentListController.java
@@ -349,12 +349,12 @@ http://localhost:8090/mvc03/memberlist.action
    - DepartmentUpdateController.java
    - DepartmentDeleteController.java
   
-   - RegionListController.java
-   - RegionInsertFormController.java
-   - RegionInsertController.java
-   - RegionUpdateFormController.java
-   - RegionUpdateController.java
-   - RegionDeleteController.java
+   - #33. RegionListController.java
+   - #35. RegionInsertFormController.java
+   - #36. RegionInsertController.java
+   - #37. RegionUpdateFormController.java
+   - #38. RegionUpdateController.java
+   - #39. RegionDeleteController.java
 
    - PositionListController.java
    - PositionInsertFormController.java
@@ -369,14 +369,14 @@ http://localhost:8090/mvc03/memberlist.action
 
    - #30. EmpListController.java
  
-   -#17. dispatcher-servlet.xml	→ 컨트롤러 객체 등록. 
-                                → URL 매핑 주소 등록.
-			        → SimpleDriverDataSource 객체 등록.
- 				→ 의존 객체 주입 설정.
-				→ DAO 객체 등록.
+   - #17. dispatcher-servlet.xml   → 컨트롤러 객체 등록. 
+                                   → URL 매핑 주소 등록.
+			           → SimpleDriverDataSource 객체 등록.
+ 				   → 의존 객체 주입 설정.
+				   → DAO 객체 등록.
 
-   -#16. web.xml			→ DispatcherServlet 객체 등록. 
-			        → URL 매핑 주소 등록.
+   -#16. web.xml		   → DispatcherServlet 객체 등록. 
+			           → URL 매핑 주소 등록.
 
 
 ○ 사용자 최초 요청 주소

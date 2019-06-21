@@ -36,20 +36,21 @@ public class EmpListController implements Controller
 		// 액션 코드		
 		ModelAndView mav = new ModelAndView();
 		
+		
 		ArrayList<Employee> employeeList = new ArrayList<Employee>();
 		
-		// 세션 처리 과정 추가 ----------------------------------------------
+		// 세션 처리 과정 추가 --------------------------------------------
 		HttpSession session = request.getSession();
 		
-		if (session.getAttribute("name")==null)	//-- 로그인이 되어있지 않은 상황
+		if (session.getAttribute("name")==null)
 		{
-			mav.setViewName("redirect:loginform.action");
+			mav.setViewName("redirect:logout.action");
 			return mav;
-		}	
+		}
+		// -------------------------------------------- 세션 처리 과정 추가 
 		
 		
 		// 세션 처리에 따른 추가 구성 → 로그인 여부만 확인 → 관리자 확인할 필요 없음
-		
 		try
 		{
 			employeeList = dao.list();

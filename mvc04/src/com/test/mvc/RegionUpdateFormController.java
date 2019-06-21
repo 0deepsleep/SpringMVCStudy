@@ -1,15 +1,13 @@
 /*==================================================
- 	#15. EmployeeListController.java
+ 	#24. EmployeeUpdateFormController.java
  	- 사용자 정의 컨트롤러 클래스
- 	- 리스트 페이지 요청에 대한 액션 처리 
+ 	- 직원 데이터 수정 폼 요청에 대한 액션 처리
  	- DAO 객체에 대한 의존성 주입(DI)을 위한 준비
  	  → 인터페이스 형태의 자료형을 속성으로 구성
- 	  → setter 메소드 준비
-==================================================*/
+ 	  → setter 메소드 준비 
+===================================================*/
 
 package com.test.mvc;
-
-import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -21,12 +19,15 @@ import org.springframework.web.servlet.mvc.Controller;
 
 // ※ Spring 의 『Controller』 인터페이스를 구현하는 방법을 통해
 //    사용자 정의 컨트롤러 클래스를 구성한다.
-public class EmployeeListController implements Controller
+public class RegionUpdateFormController implements Controller
 {
-	// DAO 인터페이스 자료형 멤버 구성
-	private IEmployeeDAO dao;
+	// check!!!!
+	// EmployeeInsertFormController 구성과는 다른 방식으로 처리~!!
 	
-	public void setDao(IEmployeeDAO dao)
+	private IRegionDAO dao;
+	
+
+	public void setDao(IRegionDAO dao)
 	{
 		this.dao = dao;
 	}
@@ -40,39 +41,36 @@ public class EmployeeListController implements Controller
 		// 세션 처리 과정 추가 ----------------------------------------------
 		HttpSession session = request.getSession();
 		
-		if (session.getAttribute("name")==null)	//-- 로그인이 되어있지 않은 상황
+		if (session.getAttribute("admin")==null)
 		{
-			mav.setViewName("redirect:loginform.action");
+			mav.setViewName("redirect:regionlist.action");
 			return mav;
-		}
-		else if (session.getAttribute("admin")==null) //-- 일반 사원으로 로그인
-		{
-			mav.setViewName("redirect:logout.action");
-			return mav;
-		}
+		}		
+		
 		// ---------------------------------------------- 세션 처리 과정 추가
-		
-		
-		ArrayList<Employee> employeeList = new ArrayList<Employee>();
 		
 		try
 		{
-			employeeList = dao.list();
+			// 데이터 수신(RegionList.jsp 페이지로부터 regionId 수신)
+			String regionId = request.getParameter("regionId");
 			
-			mav.addObject("employeeList", employeeList);
+			Region region = new Region();
 			
-			mav.setViewName("/WEB-INF/view/EmployeeList.jsp");
+			region.setRegionId(regionId);
+
+			dao.modify(region);
+
+			mav.setViewName("redirect:regionlist.action");		
 			
 		} catch (Exception e)
 		{
 			System.out.println(e.toString());
 		}
 		
-
+		
 		return mav;
 
 	}
-	
 
 }
 
