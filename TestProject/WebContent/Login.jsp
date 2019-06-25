@@ -92,7 +92,7 @@
 		  <input type="text" id="userId" name="userId" class="form-control" 
 		  required="required" placeholder="test@test.com">
 		    </div>
-		    <span id="err1">아이디를 입력해주세요.</span><br>
+		    <span class="glyphicon glyphicon-exclamation-sign" id="err1">아이디를 입력해주세요.</span><br>
 		   
 		<div class="input-group" id="memberForm">
 	  		<div class="input-group-prepend" style="">
@@ -101,7 +101,7 @@
 		  	<input type="password" id="userPwd" name="userPwd" class="form-control"
 		  required="required" >
 		</div>
-		<span id="err2">비밀번호를 입력해주세요.</span>
+		<span class="glyphicon glyphicon-exclamation-sign" id="err2">비밀번호를 입력해주세요.</span>
 		<br><input type="checkbox" style="width: 20px;">자동로그인
 
 		<br><br>

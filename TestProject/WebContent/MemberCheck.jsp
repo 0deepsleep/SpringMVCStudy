@@ -78,25 +78,24 @@
 	<div class="card" >
 	  <div class="card-body">
 	    <h1>회원정보확인</h1>
+	    <hr>
 	    <div>
 	    	<form action="">
 		    	<table class="table">
-				    <tr>
-				      <th>아이디(이메일)</th>
-				      <td>test@test.com </td>
-				    </tr>
+		    	<tr>000님의 정보를 안전하게 보호하기 위해 비밀번호를 다시 한 번 확인합니다.</tr>
 				    <tr>
 				      <th>비밀번호</th>
 				      <td>
 						<div class="input-group" id="memberForm">
 							<div>
 				      		<input type="password" id="userPwd" name="userPwd" class="form-control" required="required">
+				      		<span class="glyphicon glyphicon-exclamation-sign" style="font-style: red;" id="err">비밀번호가 틀립니다.</span>
 				      		</div>
 				      	</div>
 				      </td>
 				    </tr>
 				  </table>
-				  <!--   <span style="font-style: red;" id="err">비밀번호를 입력해주세요.</span> -->
+				  <!--   -->
 				    
 				</div>
 			</form>

@@ -7,6 +7,8 @@ C:\SpringMVCStudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\94134555
 \mvc02\src
 C:\SpringMVCStudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1405134761.index
 \mvc04\src
+C:\SpringMVCStudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3282469364.index
+\mvc06\src
 C:\SpringMVCStudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2643483393.index
 \mvc03\src
 C:\SpringMVCStudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2254808177.index
