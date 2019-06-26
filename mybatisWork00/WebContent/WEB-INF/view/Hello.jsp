@@ -8,9 +8,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Hello.jsp</title>
 </head>
 <body>
+
+<div>
+	<h1>${message }</h1>
+</div>
 
 </body>
 </html>
