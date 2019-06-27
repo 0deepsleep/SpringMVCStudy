@@ -79,3 +79,5 @@ COMMIT;
 --==>> Ä¿¹Ô ¿Ï·á.
 
 
+select * from tbl_memberlist;
+rollback;
