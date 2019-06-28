@@ -29,4 +29,5 @@ public class StudentController
 		return "WEB-INF/view/StudentList.jsp";
 	}
 	
+	
 }
